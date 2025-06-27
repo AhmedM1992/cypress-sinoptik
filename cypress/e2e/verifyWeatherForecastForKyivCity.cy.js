@@ -6,10 +6,10 @@ describe('Verify 7 and 10 days weather forecasts for Kyiv', () => {
   const tabsAssertions = new WeatherTabsAssertions();
   const city = 'Київ';
 
-  beforeEach(() =>{
+  beforeEach(() => {
     weatherPage.visitHomePage();
     weatherPage.searchCity(city);
-  })
+  });
 
   it('Verify 7 days weather forecast in Kyiv', () => {
     weatherPage.clickAllSevenDayTabs().then((tabs) => {

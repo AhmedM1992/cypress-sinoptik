@@ -84,7 +84,7 @@ class WeatherPage {
         const expectedMonth = ukrMonths[expectedDate.format('MMMM')];
 
         // Interact with the tab (scroll, click, assert navigation and status)
-        cy.wrap($tab).scrollIntoView().click({ force: true });
+        cy.wrap($tab).click({ force: true });
         cy.location('pathname').should('eq', href);
         cy.request({ url: href, failOnStatusCode: false }).its('status').should('eq', 200);
 
